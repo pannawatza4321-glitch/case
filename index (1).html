@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>น้ำผึ้งมะนาว และน้ำผึ้งดอกลำไย | สั่งซื้อออนไลน์</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&family=Sarabun:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2b1c;--leaf:#3f7a2a;--amber:#b8700f;--lemon:#f6dd3b;--bg:#f6f9ef;--line:#d5dfc4}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.7 Sarabun,sans-serif;color:var(--ink);background:var(--bg)}
+h1,h2,h3{font-family:Mitr,sans-serif;font-weight:500;line-height:1.3;margin:0}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding:48px 0}
+.hero h1{font-size:clamp(30px,5vw,46px)}
+.hero p{max-width:34em}
+.hero img{width:100%;height:auto;border-radius:16px}
+.btn{display:inline-block;background:var(--leaf);color:#fff;border:0;border-radius:8px;padding:12px 24px;font:500 17px Sarabun,sans-serif;cursor:pointer;text-decoration:none}
+.btn:hover{background:#2f6420}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--lemon);outline-offset:2px}
+section{padding:40px 0}
+.sku{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:center;padding:24px 0;border-top:1px solid var(--line)}
+.crop{overflow:hidden;border-radius:16px;background:#fff7e0}
+.crop img{display:block;width:100%;height:auto}
+.price{font:500 24px Mitr,sans-serif;color:var(--amber)}
+.sku small{color:#5b6a52}
+form{display:grid;gap:14px;max-width:620px}
+label{display:grid;gap:4px;font-weight:500}
+input,textarea{font:inherit;padding:10px 12px;border:1px solid #b9c8a4;border-radius:8px;background:#fff}
+.qty{display:grid;grid-template-columns:1fr 90px;gap:12px;align-items:center}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#msg{min-height:1.6em;font-weight:500}
+.err{color:#a12020}.ok{color:var(--leaf)}
+footer{padding:28px 0;border-top:1px solid var(--line);color:#5b6a52;font-size:15px}
+@media(max-width:720px){.hero,.sku,.row2{grid-template-columns:1fr}.crop{max-width:300px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div>
+    <h1>น้ำผึ้งแท้ สองรสชาติ<br>จากสวนถึงโต๊ะอาหาร</h1>
+    <p>น้ำผึ้งมะนาวที่เปรี้ยวหวานชื่นใจ และน้ำผึ้งดอกลำไยกลิ่นหอมนุ่ม บรรจุขวดแก้วขนาด 250 กรัม จัดส่งทั่วประเทศ</p>
+    <p><a class="btn" href="#order">สั่งซื้อเลย</a></p>
+  </div>
+  <img src="images/honey-products.png" alt="ขวดน้ำผึ้งมะนาวและน้ำผึ้งดอกลำไย" width="1424" height="964">
+</header>
+
+<section id="products">
+  <h2>สินค้าของเรา</h2>
+  <div class="sku">
+    <div class="crop"><img src="images/honey-lemon.png" alt="น้ำผึ้งมะนาว" loading="lazy"></div>
+    <div><h3>น้ำผึ้งมะนาว</h3><small>รหัสสินค้า HNY-LEM-250 · 250 กรัม</small>
+      <p>ผสมน้ำมะนาวสด รสเปรี้ยวอ่อน หวานกลมกล่อม ใช้ชงเครื่องดื่มเย็นหรือร้อน</p>
+      <div class="price">฿159</div></div>
+  </div>
+  <div class="sku">
+    <div class="crop"><img src="images/honey-longan.png" alt="น้ำผึ้งดอกลำไย" loading="lazy"></div>
+    <div><h3>น้ำผึ้งดอกลำไย</h3><small>รหัสสินค้า HNY-LGN-250 · 250 กรัม</small>
+      <p>สีอำพันเข้ม กลิ่นหอมเฉพาะตัว รสหวานนุ่ม เหมาะกับขนมปัง โยเกิร์ต และอาหารคาว</p>
+      <div class="price">฿189</div></div>
+  </div>
+</section>
+
+<section id="order">
+  <h2>สั่งซื้อ</h2>
+  <form id="f" novalidate>
+    <div class="qty"><label for="q-HNY-LEM-250">น้ำผึ้งมะนาว (฿159)</label><input id="q-HNY-LEM-250" type="number" min="0" max="99" value="0" inputmode="numeric"></div>
+    <div class="qty"><label for="q-HNY-LGN-250">น้ำผึ้งดอกลำไย (฿189)</label><input id="q-HNY-LGN-250" type="number" min="0" max="99" value="0" inputmode="numeric"></div>
+    <label>ชื่อผู้รับ<input id="name" autocomplete="name" required></label>
+    <label>เบอร์โทร<input id="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="0812345678" required></label>
+    <label>ที่อยู่ (บ้านเลขที่ ถนน ตำบล อำเภอ)<textarea id="address" rows="3" autocomplete="street-address" required></textarea></label>
+    <div class="row2">
+      <label>จังหวัด<input id="province" autocomplete="address-level1" required></label>
+      <label>รหัสไปรษณีย์<input id="postcode" inputmode="numeric" maxlength="5" autocomplete="postal-code" required></label>
+    </div>
+    <p>ยอดรวม <strong id="total">฿0</strong> (ยังไม่รวมค่าจัดส่ง)</p>
+    <button class="btn" type="submit" id="go">ยืนยันคำสั่งซื้อ</button>
+    <div id="msg" role="status"></div>
+  </form>
+</section>
+<footer>ร้านน้ำผึ้งตัวอย่าง (งานของนักศึกษา) · ติดต่อ: 081-234-5678</footer>
+</div>
+<script>
+const SCRIPT_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+const PRODUCTS = [
+  {sku:"HNY-LEM-250", name:"น้ำผึ้งมะนาว 250 กรัม", price:159},
+  {sku:"HNY-LGN-250", name:"น้ำผึ้งดอกลำไย 250 กรัม", price:189}
+];
+const $ = id => document.getElementById(id);
+const qtyOf = p => Math.max(0, Math.min(99, parseInt($("q-"+p.sku).value,10) || 0));
+function total(){ const t = PRODUCTS.reduce((s,p)=>s+qtyOf(p)*p.price,0); $("total").textContent = "฿"+t.toLocaleString("th-TH"); return t; }
+PRODUCTS.forEach(p => $("q-"+p.sku).addEventListener("input", total));
+$("f").addEventListener("submit", async e => {
+  e.preventDefault();
+  const msg = $("msg"); msg.className = "";
+  const lines = PRODUCTS.map(p => ({sku:p.sku, name:p.name, price:p.price, qty:qtyOf(p)})).filter(l => l.qty > 0);
+  const d = {name:$("name").value.trim(), phone:$("phone").value.replace(/[\s-]/g,""), address:$("address").value.trim(), province:$("province").value.trim(), postcode:$("postcode").value.trim()};
+  if (!lines.length) { msg.className="err"; msg.textContent="เลือกจำนวนสินค้าอย่างน้อย 1 ขวด"; return; }
+  if (!d.name || !d.address || !d.province) { msg.className="err"; msg.textContent="กรอกชื่อ ที่อยู่ และจังหวัดให้ครบ"; return; }
+  if (!/^0\d{8,9}$/.test(d.phone)) { msg.className="err"; msg.textContent="เบอร์โทรต้องขึ้นต้นด้วย 0 และมี 9–10 หลัก"; return; }
+  if (!/^\d{5}$/.test(d.postcode)) { msg.className="err"; msg.textContent="รหัสไปรษณีย์ต้องมี 5 หลัก"; return; }
+  const orderId = "HN" + Date.now().toString(36).toUpperCase();
+  $("go").disabled = true; msg.textContent = "กำลังส่งคำสั่งซื้อ...";
+  try {
+    await fetch(SCRIPT_URL, {method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain;charset=utf-8"}, body:JSON.stringify({...d, orderId, lines})});
+    msg.className = "ok"; msg.textContent = "รับคำสั่งซื้อแล้ว เลขที่ " + orderId + " ยอด ฿" + total().toLocaleString("th-TH");
+    $("f").reset(); total();
+  } catch (err) {
+    msg.className = "err"; msg.textContent = "ส่งไม่สำเร็จ ตรวจสอบอินเทอร์เน็ตแล้วลองใหม่";
+  }
+  $("go").disabled = false;
+});
+</script>
+</body>
+</html>
